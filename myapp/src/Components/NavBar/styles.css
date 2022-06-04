@@ -1,70 +1,103 @@
-.navBar{
+.navBar {
     display: flex;
     justify-content: space-between;
-    width:100%;
+    width: 100%;
     max-height: 70px;
-    padding:16px 30px;
-    border-bottom:1px solid black;
+    padding: 16px 30px;
+    border-bottom: 1px solid black;
 }
-.logo{
+
+.logo {
     display: flex;
     width: 20%;
     align-items: center;
     justify-content: space-evenly;
-    color:rgb(89, 174, 247);
+    color: rgb(89, 174, 247);
 }
-.logoImg{
-    width:80px;
+
+.logoImg {
+    width: 80px;
     height: 80px;
 }
-.logoTxt{
+
+.logoTxt {
     font-size: 22px;
     font-weight: 600;
     font-family: monospace;
-
 }
-.navBarItems{
-    display:flex;
+
+.navBarItems {
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width:80%;
+    width: 80%;
     font-size: 18px;
     font-weight: 600;
     font-family: monospace;
 }
-.navBarItem{
+
+.navBarItem {
     min-width: 100px;
 }
-.menuIcon{
+
+.menuIcon {
     display: none;
 }
+
 @media screen and (max-width: 480px) {
-    .navBar{
-        padding:5px 0px !important;
+    .navBar {
+        padding: 5px 0px !important;
         align-items: center !important;
 
     }
-    .menuIcon{
-        display: inline;
-        color:rgba(0, 0, 0, 0.285);
+
+    .menuIcon {
+        position: relative;
+        display: inline-block;
+        color: rgba(0, 0, 0, 0.6);
         margin-right: 25px;
     }
-    .navBarItems{
+
+    .mobileDropDown {
+        position: absolute;
+        background-color: #f1f1f1;
+        width: 100%;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        z-index: 1;
+        top: 70px;
+        background-color:  rgb(83, 71, 244);;
+    }
+    .mobileDropDownItem{
+        padding: 5px 8px;
+    font-size: 18px;
+    font-weight: 600;
+    border: 1px solid white;
+    color: white;
+    min-height: 64px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    }
+
+    .navBarItems {
         display: none !important
     }
-    .logo{
+
+    .logo {
         display: flex !important;
-        width:50%;
+        width: 50%;
     }
-    .logoImg{
-        width:60px !important;
+
+    .logoImg {
+        width: 60px !important;
         height: 60px !important;
-        margin-right:4px;
+        margin-right: 4px;
     }
-    .logoTxt{
+
+    .logoTxt {
         font-size: 16px !important;
         font-weight: 600 !important;
         font-family: monospace !important;
-    
+
     }
-  }
+}
